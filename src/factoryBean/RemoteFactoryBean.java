@@ -8,7 +8,7 @@ import org.springframework.beans.factory.FactoryBean;
 
 /**
  * 用于创创建借口的代理bean
- *
+ * 用于远程服务调用等
  */
 public class RemoteFactoryBean implements FactoryBean<Object> {
 
