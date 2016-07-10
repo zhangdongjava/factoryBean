@@ -6,7 +6,7 @@ import java.lang.reflect.Proxy;
 
 import org.springframework.beans.factory.FactoryBean;
 
-public class UserFactoryBean implements FactoryBean<Object> {
+public class RemoteFactoryBean implements FactoryBean<Object> {
 
 	@Override
 	public Object getObject() throws Exception {
