@@ -11,9 +11,9 @@ public class UserFactoryBean implements FactoryBean<Object> {
 	@Override
 	public Object getObject() throws Exception {
 		return Proxy.newProxyInstance(this.getClass().getClassLoader(),
-				Class.forName(className).getInterfaces(), new InvocationHandler() {
+				new Class[]{Class.forName(className)}, new InvocationHandler() {
 					public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-						System.out.println(method.getName());
+						System.out.println("代理执行的方法:"+method.getName());
 						return null;
 					}
 				});
@@ -38,6 +38,7 @@ public class UserFactoryBean implements FactoryBean<Object> {
 		return className;
 	}
 	public void setClassName(String className) {
+		System.out.println(className);
 		this.className = className;
 	}
 	
