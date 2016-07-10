@@ -6,6 +6,9 @@ import java.lang.reflect.Proxy;
 
 import org.springframework.beans.factory.FactoryBean;
 
+/**
+ * 用于创创建借口的代理bean
+ */
 public class RemoteFactoryBean implements FactoryBean<Object> {
 
 	@Override
