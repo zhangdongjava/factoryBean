@@ -12,7 +12,7 @@ import org.springframework.beans.factory.FactoryBean;
  */
 public class RemoteFactoryBean implements FactoryBean<Object> {
 
-	private Class claObj;
+	private Class<?> claObj;
 
 	@Override
 	public Object getObject() throws Exception {
